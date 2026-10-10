@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" font-family="'Courier New',monospace">
+<defs>
+  <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <radialGradient id="orb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#7c3aed"/></radialGradient>
+</defs>
+<rect x="1" y="1" width="898" height="318" rx="22" fill="#0d1117" stroke="#30363d"/>
+<text x="40" y="44" font-size="10" fill="#22d3ee" letter-spacing="2">// TECH STACK</text>
+<text x="40" y="74" font-size="24" font-weight="bold" fill="#e6edf3" font-family="Arial,sans-serif">Tools I build with</text>
+
+<!-- orbit animation -->
+<g transform="translate(170 185)">
+  <g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    <ellipse rx="110" ry="50" fill="none" stroke="#22d3ee" stroke-opacity=".35"/><circle cx="110" cy="0" r="9" fill="#22d3ee"/></g>
+  <g transform="rotate(60)"><g><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="28s" repeatCount="indefinite"/>
+    <ellipse rx="110" ry="50" fill="none" stroke="#a78bfa" stroke-opacity=".35"/><circle cx="-110" cy="0" r="9" fill="#a78bfa"/></g></g>
+  <g transform="rotate(120)"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="36s" repeatCount="indefinite"/>
+    <ellipse rx="110" ry="50" fill="none" stroke="#f472b6" stroke-opacity=".35"/><circle cx="0" cy="50" r="9" fill="#f472b6"/></g></g>
+  <circle r="34" fill="url(#orb)"><animate attributeName="r" values="34;38;34" dur="3s" repeatCount="indefinite"/></circle>
+  <text y="6" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">&lt;/&gt;</text>
+</g>
+<line x1="350" x2="350" y1="95" y2="290" stroke="#30363d"/>
+
+<g font-size="9" letter-spacing="2">
+  <text x="370" y="110" fill="#22d3ee">CLOUD</text>
+  <text x="370" y="168" fill="#a78bfa">CONTAINERS</text>
+  <text x="370" y="226" fill="#fbbf24">IAC &amp; CI/CD</text>
+  <text x="370" y="284" fill="#f472b6">FOUNDATIONS</text>
+</g>
+<g font-size="12" fill="#e6edf3" text-anchor="middle">
+  <!-- cloud -->
+  <rect x="370" y="116" width="75" height="30" rx="8" fill="#0f2233" stroke="#1e5b8a"/><text x="407" y="136">Azure</text>
+  <rect x="455" y="116" width="65" height="30" rx="8" fill="#2a1f0d" stroke="#8a5a1e"/><text x="487" y="136">AWS</text>
+  <!-- containers -->
+  <rect x="370" y="174" width="80" height="30" rx="8" fill="#0d2233" stroke="#1e6f8a"/><text x="410" y="194">Docker</text>
+  <rect x="460" y="174" width="112" height="30" rx="8" fill="#10223a" stroke="#2a4f9a"/><text x="516" y="194">Kubernetes</text>
+  <!-- iac / ci -->
+  <rect x="370" y="232" width="105" height="30" rx="8" fill="#1d1536" stroke="#5b3fa8"/><text x="422" y="252">Terraform</text>
+  <rect x="485" y="232" width="90" height="30" rx="8" fill="#2a1414" stroke="#8a2e2e"/><text x="530" y="252">Jenkins</text>
+  <rect x="585" y="232" width="140" height="30" rx="8" fill="#161b22" stroke="#444c56"/><text x="655" y="252">GitHub Actions</text>
+  <rect x="735" y="232" width="130" height="30" rx="8" fill="#0f2233" stroke="#1e5b8a"/><text x="800" y="252">Azure DevOps</text>
+  <!-- foundations -->
+  <rect x="370" y="290" width="75" height="26" rx="8" fill="#161b22" stroke="#444c56"/><text x="407" y="307">Linux</text>
+  <rect x="455" y="290" width="65" height="26" rx="8" fill="#2a1414" stroke="#8a2e2e"/><text x="487" y="307">Git</text>
+  <rect x="530" y="290" width="70" height="26" rx="8" fill="#161b22" stroke="#444c56"/><text x="565" y="307">YAML</text>
+</g>
+</svg>

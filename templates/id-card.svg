@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="450" viewBox="0 0 900 450" font-family="'Courier New',monospace">
+<defs>
+  <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e2440"/><stop offset="1" stop-color="#141728"/></linearGradient>
+  <linearGradient id="lan" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+  <linearGradient id="shine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <clipPath id="cc"><rect x="40" y="90" width="260" height="340" rx="18"/></clipPath>
+  <clipPath id="pc"><rect x="100" y="130" width="140" height="150" rx="14"/></clipPath>
+  <radialGradient id="vig" cx=".5" cy=".42" r=".75"><stop offset=".55" stop-color="#0d1117" stop-opacity="0"/><stop offset="1" stop-color="#0d1117" stop-opacity=".8"/></radialGradient>
+  <linearGradient id="leak" x1="0" x2="1"><stop offset="0" stop-color="#ffb347" stop-opacity="0"/><stop offset=".5" stop-color="#ffb347" stop-opacity=".38"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></linearGradient>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="1"><animate attributeName="seed" values="1;2;3;4;5;6;7;8" dur=".8s" repeatCount="indefinite" calcMode="discrete"/></feTurbulence><feColorMatrix type="saturate" values="0"/></filter>
+</defs>
+<style>.kb{transform-origin:170px 205px;animation:kb 9s ease-in-out infinite alternate}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.1)}}</style>
+<rect x="1" y="1" width="898" height="448" rx="22" fill="#0d1117" stroke="#30363d"/>
+
+<!-- swinging ID card -->
+<g>
+  <animateTransform attributeName="transform" type="rotate" values="-3 170 0;3 170 0;-3 170 0" keyTimes="0;.5;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/>
+  <rect x="158" y="0" width="24" height="84" fill="url(#lan)"/>
+  <rect x="150" y="76" width="40" height="14" rx="4" fill="#9aa4b2"/>
+  <rect x="40" y="90" width="260" height="340" rx="18" fill="url(#card)" stroke="#a78bfa" stroke-opacity=".6" stroke-width="1.5"/>
+  <text x="58" y="116" font-size="10" fill="#22d3ee" letter-spacing="2">DEVELOPER ID</text>
+  <text x="282" y="116" font-size="10" fill="#8b949e" text-anchor="end">v1.0</text>
+  <rect x="58" y="128" width="34" height="26" rx="5" fill="#d9b86a" opacity=".85"/>
+
+  <rect x="100" y="130" width="140" height="150" rx="14" fill="url(#g)" opacity=".25"/>
+  <text x="170" y="215" font-size="38" fill="#8b949e" text-anchor="middle" font-family="Arial,sans-serif">VK</text>
+  <g clip-path="url(#pc)">
+    <g class="kb"><image href="data:image/jpeg;base64,CARD_B64" x="100" y="130" width="140" height="150" preserveAspectRatio="xMidYMin slice"/></g>
+    <rect x="100" y="130" width="140" height="150" fill="url(#vig)"/>
+    <rect x="100" y="130" width="140" height="150" filter="url(#grain)" opacity=".13"/>
+    <rect x="40" y="130" width="60" height="150" fill="url(#leak)"><animate attributeName="x" values="40;240;240" dur="5s" repeatCount="indefinite"/></rect>
+    <rect x="100" y="130" width="140" height="150" fill="#ffb347" opacity="0"><animate attributeName="opacity" values="0;.06;0;0;.04;0" dur="3s" repeatCount="indefinite"/></rect>
+  </g>
+  <rect x="100" y="130" width="140" height="150" rx="14" fill="none" stroke="url(#g)" stroke-width="2">
+    <animate attributeName="stroke-opacity" values="1;.4;1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <!-- scan line over photo -->
+  <g clip-path="url(#pc)"><rect x="100" y="130" width="140" height="3" fill="#22d3ee" opacity=".7">
+    <animate attributeName="y" values="130;278;130" dur="3.5s" repeatCount="indefinite"/></rect></g>
+
+  <text x="170" y="312" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif">Vamsi Kandula</text>
+  <text x="170" y="332" font-size="10" fill="#a78bfa" text-anchor="middle" letter-spacing="2">JUNIOR DEVOPS ENGINEER</text>
+  <text x="62" y="360" font-size="8" fill="#8b949e" letter-spacing="1">BASE</text><text x="62" y="374" font-size="11" fill="#e6edf3">Hyderabad, IN</text>
+  <text x="190" y="360" font-size="8" fill="#8b949e" letter-spacing="1">TEAM</text><text x="190" y="374" font-size="11" fill="#e6edf3">Cloud &amp; DevOps</text>
+  <line x1="62" x2="278" y1="400" y2="400" stroke="#c9d1d9" stroke-width="20" stroke-dasharray="2 3 4 2 1 4 3 2 5 2" opacity=".85"/>
+  <circle cx="62" cy="420" r="3" fill="#34d399"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <text x="72" y="423" font-size="8" fill="#34d399" letter-spacing="1">OPEN TO WORK</text>
+  <!-- shimmer -->
+  <g clip-path="url(#cc)"><rect x="-120" y="90" width="90" height="340" fill="url(#shine)" transform="skewX(-15)">
+    <animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;520 0" dur="4s" repeatCount="indefinite"/></rect></g>
+</g>
+
+<!-- dashboard -->
+<text x="340" y="50" font-size="10" fill="#22d3ee" letter-spacing="2">// DEVELOPER DASHBOARD</text>
+<text x="340" y="82" font-size="26" font-weight="bold" fill="#e6edf3" font-family="Arial,sans-serif">Profile at a glance</text>
+<rect x="745" y="40" width="125" height="26" rx="13" fill="#0f2a24" stroke="#1f6f58"/>
+<circle cx="762" cy="53" r="4" fill="#34d399"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
+<text x="772" y="57" font-size="10" fill="#34d399" letter-spacing="1">LIVE · GITHUB</text>
+
+<!-- EDIT these 4 mini cards -->
+<g font-family="Arial,sans-serif">
+  <rect x="340" y="110" width="125" height="80" rx="12" fill="#161b22" stroke="#30363d"/><rect x="354" y="120" width="20" height="3" fill="#22d3ee"/>
+  <text x="354" y="155" font-size="24" font-weight="bold" fill="#fff">Azure</text><text x="354" y="175" font-size="9" fill="#8b949e" letter-spacing="1" font-family="'Courier New',monospace">CLOUD</text>
+  <rect x="475" y="110" width="125" height="80" rx="12" fill="#161b22" stroke="#30363d"/><rect x="489" y="120" width="20" height="3" fill="#fbbf24"/>
+  <text x="489" y="155" font-size="24" font-weight="bold" fill="#fff">Docker</text><text x="489" y="175" font-size="9" fill="#8b949e" letter-spacing="1" font-family="'Courier New',monospace">CONTAINERS</text>
+  <rect x="610" y="110" width="125" height="80" rx="12" fill="#161b22" stroke="#30363d"/><rect x="624" y="120" width="20" height="3" fill="#a78bfa"/>
+  <text x="624" y="155" font-size="24" font-weight="bold" fill="#fff">K8s</text><text x="624" y="175" font-size="9" fill="#8b949e" letter-spacing="1" font-family="'Courier New',monospace">ORCHESTRATION</text>
+  <rect x="745" y="110" width="125" height="80" rx="12" fill="#161b22" stroke="#30363d"/><rect x="759" y="120" width="20" height="3" fill="#f472b6"/>
+  <text x="759" y="155" font-size="24" font-weight="bold" fill="#fff">CI/CD</text><text x="759" y="175" font-size="9" fill="#8b949e" letter-spacing="1" font-family="'Courier New',monospace">PIPELINES</text>
+</g>
+
+<!-- skill bars (edit the widths: max 150) -->
+<rect x="340" y="210" width="310" height="220" rx="12" fill="#161b22" stroke="#30363d"/>
+<text x="358" y="234" font-size="9" fill="#8b949e" letter-spacing="2">SKILLS IN FOCUS</text>
+<g font-size="12" fill="#c9d1d9">
+  <text x="358" y="268">Azure DevOps</text><rect x="480" y="258" width="150" height="10" rx="5" fill="#0d1117"/><rect x="480" y="258" width="0" height="10" rx="5" fill="url(#g)"><animate attributeName="width" from="0" to="140" dur="1.5s" fill="freeze"/></rect>
+  <text x="358" y="298">Docker</text><rect x="480" y="288" width="150" height="10" rx="5" fill="#0d1117"/><rect x="480" y="288" width="0" height="10" rx="5" fill="url(#g)"><animate attributeName="width" from="0" to="120" dur="1.5s" begin=".2s" fill="freeze"/></rect>
+  <text x="358" y="328">Terraform</text><rect x="480" y="318" width="150" height="10" rx="5" fill="#0d1117"/><rect x="480" y="318" width="0" height="10" rx="5" fill="url(#g)"><animate attributeName="width" from="0" to="105" dur="1.5s" begin=".4s" fill="freeze"/></rect>
+  <text x="358" y="358">Kubernetes</text><rect x="480" y="348" width="150" height="10" rx="5" fill="#0d1117"/><rect x="480" y="348" width="0" height="10" rx="5" fill="url(#g)"><animate attributeName="width" from="0" to="90" dur="1.5s" begin=".6s" fill="freeze"/></rect>
+  <text x="358" y="388">Linux &amp; Git</text><rect x="480" y="378" width="150" height="10" rx="5" fill="#0d1117"/><rect x="480" y="378" width="0" height="10" rx="5" fill="url(#g)"><animate attributeName="width" from="0" to="115" dur="1.5s" begin=".8s" fill="freeze"/></rect>
+</g>
+<text x="358" y="416" font-size="9" fill="#8b949e">bars = my comfort level (edit me)</text>
+
+<rect x="660" y="210" width="210" height="220" rx="12" fill="#161b22" stroke="#30363d"/>
+<g font-size="8" letter-spacing="1.5">
+  <circle cx="678" cy="240" r="3" fill="#22d3ee"/><text x="690" y="244" fill="#22d3ee">BUILDING</text>
+  <text x="678" y="262" font-size="12" fill="#e6edf3" font-family="Arial,sans-serif">Azure CI/CD pipelines</text>
+  <circle cx="678" cy="300" r="3" fill="#a78bfa"/><text x="690" y="304" fill="#a78bfa">EXPLORING</text>
+  <text x="678" y="322" font-size="12" fill="#e6edf3" font-family="Arial,sans-serif">Terraform + Kubernetes</text>
+  <circle cx="678" cy="360" r="3" fill="#f472b6"/><text x="690" y="364" fill="#f472b6">FUEL</text>
+  <text x="678" y="382" font-size="12" fill="#e6edf3" font-family="Arial,sans-serif">Coffee &amp; late-night labs</text>
+</g>
+</svg>
